@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <h1>{{.PageTitle}}</h1>
+        <ul>
+            {{range .Files}}
+                {{if .Directory}}
+                    <li> <a href={{.URL}}>{{.Name}} </a> </li>
+                {{else}}
+                    <li> <a href={{.URL}} download>{{.Name}} </a> </li>
+                {{end}}
+
+            {{end}}
+        </ul>
+  </head>
+  <body>
+    <h1>{{.PageBody}}</h1>
+    <button type="button" onclick="location.href='/';"> </a>>Home</button>
+  </body>
+</html>
+
+
+
